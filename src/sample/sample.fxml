@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="551.0" prefWidth="884.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+   <children>
+      <VBox prefHeight="540.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0">
+               <children>
+                  <Label prefWidth="40" text="地址:">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Label>
+                  <TextField fx:id="ip" text="127.0.0.1" />
+                  <Label prefWidth="40" text="端口:">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="port" text="7005" />
+                  <Button mnemonicParsing="false" onAction="#send" prefWidth="95.0" text="连接">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+            <Pane prefHeight="200.0">
+               <children>
+                  <TextArea fx:id="content" wrapText="true"/>
+               </children></Pane>
+            <Pane prefHeight="200.0">
+               <children>
+                  <TextArea editable="false" fx:id="answer" wrapText="true"/>
+               </children></Pane>
+         </children></VBox>
+   </children>
+</GridPane>
